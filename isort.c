@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define ARRAY_SIZE 10
+#define ARRAY_SIZE 50
 
 /*the finction will shift all element 1 place right */ 
 
