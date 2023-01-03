@@ -21,11 +21,11 @@ int buffer_c = ' '; // is used to get a char with fgets. is extern beacuse is us
 
 int main(int argc, char *argv[])
 {
-    
-    char* wordToFind = {0};              // the first word in the input file. it is the word that we will search
+    char wordToFind[WORD] = {0};              // the first word in the input file. it is the word that we will search
+
 
     getWord(wordToFind);   // get the first word
-    
+
     while(1)
     {
         char decision;              // decision if to print like part a or like part b
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     //    printf("Input the following:\n(a) For printing lines with similar words\n(b) for Printing similar words\n"); // ask user to pick a or b; 
        
         scanf("%c", &decision);             // get the dicision 
-        
+
         if (decision == 'a')        // print the lines with similar words
         {
             print_lines(wordToFind);
