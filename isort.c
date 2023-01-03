@@ -36,6 +36,7 @@ int main() {
         printf("%d,", arr[i]);
     }
     printf ("%d", arr[ARRAY_SIZE-1]);
+    printf("\n");
 
     return 0;
 }
