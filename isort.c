@@ -4,7 +4,7 @@
 
 #define ARRAY_SIZE 50
 
-/*the finction will shift all element 1 place right */ 
+/*the function will shift all element 1 place right */ 
 
 void shift_element(int *arr, int i) {
     int *q = arr + i;
@@ -25,18 +25,19 @@ void insertion_sort(int *arr, int len) {
 }
 
 
-int main() {
-    // printf("Pick numbers to sort\n"); // pick the number for sorting
-    int arr[ARRAY_SIZE];    
-    //int n = sizeof(arr) / sizeof(int);
-    for (int i = 0; i < ARRAY_SIZE; i++)
-        scanf("%d", &arr[i]);
-    insertion_sort(arr, ARRAY_SIZE);
-    for (int i = 0; i < ARRAY_SIZE-1; i++) {
-        printf("%d,", arr[i]);
-    }
-    printf ("%d", arr[ARRAY_SIZE-1]);
-    printf("\n");
-
-    return 0;
+int main(void) {
+printf("Pick numbers to sort\n"); // pick the number for sorting
+int arr[ARRAY_SIZE];
+int *p = arr; // Pointer to the first element of the array
+for (int i = 0; i < ARRAY_SIZE; i++) 
+{
+    scanf("%d", p + i); // Read value into the array using the pointer
+}
+insertion_sort(arr, ARRAY_SIZE); // Pass the array using its address
+for (int i = 0; i < ARRAY_SIZE-1; i++) 
+{
+    printf("%d,", *(p + i)); // Print the value at each element using the pointer
+}
+printf("%d", *(p + ARRAY_SIZE-1)); // Print the last element
+return 0;
 }
