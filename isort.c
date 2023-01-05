@@ -26,7 +26,7 @@ void insertion_sort(int *arr, int len) {
 
 
 int main(void) {
-printf("Pick numbers to sort\n"); // pick the number for sorting
+
 int arr[ARRAY_SIZE];
 int *p = arr; // Pointer to the first element of the array
 for (int i = 0; i < ARRAY_SIZE; i++) 
