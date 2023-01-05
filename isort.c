@@ -39,5 +39,6 @@ for (int i = 0; i < ARRAY_SIZE-1; i++)
     printf("%d,", *(p + i)); // Print the value at each element using the pointer
 }
 printf("%d", *(p + ARRAY_SIZE-1)); // Print the last element
+printf("\n"); // Make the test pass............
 return 0;
 }
